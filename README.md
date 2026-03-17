@@ -1,3 +1,9 @@
+> 📢 **ShopMind RAG Project** — My AI/ML project built on top 
+> of Endee Vector Database is inside the `/shopmind` folder.
+> 
+> 👉 Direct link: https://github.com/VIPULSINGH18/ecommerce-rag-endee/tree/master/shopmind
+
+
 <p align="center">
   <picture>
       <source media="(prefers-color-scheme: dark)" srcset="docs/assets/logo-dark.svg">
