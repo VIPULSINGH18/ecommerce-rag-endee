@@ -123,7 +123,6 @@ ecommerce-rag-endee/          ← forked Endee repo
 │   ├── requirements.txt
 │   ├── .env.example
 │   ├── .gitignore
-│   ├── LICENSE
 │   └── README.md
 ├── src/                      ← Endee's original source
 ├── infra/                    ← Endee's original files
@@ -314,7 +313,7 @@ Response:
 **Vipul Singh**
 - GitHub: [@VIPULSINGH18](https://github.com/VIPULSINGH18)
 - Email: vipulsingh7235@gmail.com
-- LinkedIn: https://www.linkedin.com/in/vipulsk04/
+- LinkedIn: [Vipul Singh](https://www.linkedin.com/in/vipulsk04/)
 
 ## 📄 License
 
