@@ -1,0 +1,41 @@
+version: "3.9"
+
+services:
+
+  # ── Endee Vector Database ──────────────────────────────────────────────────
+  endee:
+    image: endeeio/endee-server:latest
+    container_name: endee-server
+    ports:
+      - "8080:8080"
+    ulimits:
+      nofile: 100000
+    environment:
+      NDD_NUM_THREADS: 0
+      NDD_AUTH_TOKEN: ""        # Set a token here if you want auth
+    volumes:
+      - endee-data:/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/api/v1/index/list"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ── ShopMind RAG API ───────────────────────────────────────────────────────
+  shopmind:
+    build: .
+    container_name: shopmind-api
+    ports:
+      - "8000:8000"
+    environment:
+      ENDEE_BASE_URL: http://endee:8080/api/v1
+      ENDEE_AUTH_TOKEN: ""
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+    depends_on:
+      endee:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  endee-data:
