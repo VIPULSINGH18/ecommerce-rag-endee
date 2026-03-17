@@ -109,21 +109,25 @@ The retrieved product metadata is formatted into a prompt context that grounds t
 ## 📂 Project Structure
 
 ```
-ecommerce-rag-endee/
-├── app/
-│   ├── __init__.py
-│   ├── main.py          # FastAPI app & route definitions
-│   ├── rag_engine.py    # Core RAG logic (embed → Endee → LLM)
-│   └── catalog.py       # 30-product demo catalog
-├── scripts/
-│   └── demo.py          # End-to-end demo runner
-├── Dockerfile           # Container for the FastAPI app
-├── docker-compose.yml   # Orchestrates Endee + ShopMind together
-├── requirements.txt
-├── .env.example
-├── .gitignore           # Files excluded from version control
-├── LICENSE              # MIT License
-└── README.md
+ecommerce-rag-endee/          ← forked Endee repo
+├── shopmind/                 ← ShopMind project lives here
+│   ├── app/
+│   │   ├── __init__.py
+│   │   ├── main.py
+│   │   ├── rag_engine.py
+│   │   └── catalog.py
+│   ├── scripts/
+│   │   └── demo.py
+│   ├── Dockerfile
+│   ├── docker-compose.yml
+│   ├── requirements.txt
+│   ├── .env.example
+│   ├── .gitignore
+│   ├── LICENSE
+│   └── README.md
+├── src/                      ← Endee's original source
+├── infra/                    ← Endee's original files
+└── ...
 ```
 
 ---
@@ -142,7 +146,7 @@ ecommerce-rag-endee/
 **1. Clone this repo**
 ```bash
 git clone https://github.com/VIPULSINGH18/ecommerce-rag-endee.git
-cd ecommerce-rag-endee
+cd ecommerce-rag-endee/shopmind
 ```
 
 **2. Configure environment**
@@ -314,7 +318,8 @@ Response:
 
 ## 📄 License
 
-MIT License — feel free to build on top of this project.
+This project is licensed under the Apache-2.0 License — 
+the same license as the Endee Vector Database it builds upon.
 
 ---
 
