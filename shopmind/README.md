@@ -109,7 +109,7 @@ The retrieved product metadata is formatted into a prompt context that grounds t
 ## 📂 Project Structure
 
 ```
-ecom-rag-endee/
+ecommerce-rag-endee/
 ├── app/
 │   ├── __init__.py
 │   ├── main.py          # FastAPI app & route definitions
@@ -121,6 +121,8 @@ ecom-rag-endee/
 ├── docker-compose.yml   # Orchestrates Endee + ShopMind together
 ├── requirements.txt
 ├── .env.example
+├── .gitignore           # Files excluded from version control
+├── LICENSE              # MIT License
 └── README.md
 ```
 
@@ -139,9 +141,8 @@ ecom-rag-endee/
 
 **1. Clone this repo**
 ```bash
-# First, fork https://github.com/endee-io/endee and star it ⭐
-git clone https://github.com/<your-username>/ecom-rag-endee.git
-cd ecom-rag-endee
+git clone https://github.com/VIPULSINGH18/ecommerce-rag-endee.git
+cd ecommerce-rag-endee
 ```
 
 **2. Configure environment**
@@ -305,6 +306,10 @@ Response:
 
 ---
 
+## 👨‍💻 Author
+**Vipul Singh**
+- GitHub: [@VIPULSINGH18](https://github.com/VIPULSINGH18)
+- Email: vipulsingh7235@gmail.com
 
 ## 📄 License
 
